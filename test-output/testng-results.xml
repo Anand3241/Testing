@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="30591" started-at="2019-10-16T10:28:40Z" finished-at="2019-10-16T10:29:11Z">
+  <suite name="Suite" duration-ms="49309" started-at="2019-10-16T11:33:37Z" finished-at="2019-10-16T11:34:26Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="30591" started-at="2019-10-16T10:28:40Z" finished-at="2019-10-16T10:29:11Z">
+    <test name="Test" duration-ms="49309" started-at="2019-10-16T11:33:37Z" finished-at="2019-10-16T11:34:26Z">
       <class name="sourcesoft.proassur.HomePageTest">
-        <test-method status="PASS" signature="startTest()[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="startTest" is-config="true" duration-ms="140" started-at="2019-10-16T15:58:40Z" finished-at="2019-10-16T15:58:40Z">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="startTest" is-config="true" duration-ms="167" started-at="2019-10-16T17:03:37Z" finished-at="2019-10-16T17:03:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="preCondition(java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="preCondition" is-config="true" duration-ms="11041" started-at="2019-10-16T15:58:41Z" finished-at="2019-10-16T15:58:52Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="preCondition" is-config="true" duration-ms="11606" started-at="2019-10-16T17:03:37Z" finished-at="2019-10-16T17:03:49Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="verify_login_functionality(java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="verify_login_functionality" duration-ms="3384" started-at="2019-10-16T15:58:52Z" data-provider="getCRMTestData" finished-at="2019-10-16T15:58:55Z">
+        <test-method status="PASS" signature="verify_login_functionality(java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="verify_login_functionality" duration-ms="2894" started-at="2019-10-16T17:03:49Z" data-provider="getCRMTestData" finished-at="2019-10-16T17:03:52Z">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_login_functionality -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="postCondition" is-config="true" duration-ms="1" started-at="2019-10-16T15:58:55Z" finished-at="2019-10-16T15:58:55Z">
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="postCondition" is-config="true" duration-ms="1" started-at="2019-10-16T17:03:52Z" finished-at="2019-10-16T17:03:52Z">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method status="PASS" signature="preCondition(java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="preCondition" is-config="true" duration-ms="11873" started-at="2019-10-16T15:58:55Z" finished-at="2019-10-16T15:59:07Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="preCondition" is-config="true" duration-ms="11365" started-at="2019-10-16T17:03:52Z" finished-at="2019-10-16T17:04:03Z">
           <params>
             <param index="0">
               <value>
@@ -60,7 +60,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="verify_login_functionality(java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="verify_login_functionality" duration-ms="3160" started-at="2019-10-16T15:59:07Z" data-provider="getCRMTestData" finished-at="2019-10-16T15:59:10Z">
+        <test-method status="PASS" signature="verify_login_functionality(java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="verify_login_functionality" duration-ms="3071" started-at="2019-10-16T17:04:03Z" data-provider="getCRMTestData" finished-at="2019-10-16T17:04:06Z">
           <params>
             <param index="0">
               <value>
@@ -76,7 +76,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_login_functionality -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="postCondition" is-config="true" duration-ms="1" started-at="2019-10-16T15:59:10Z" finished-at="2019-10-16T15:59:10Z">
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="postCondition" is-config="true" duration-ms="1" started-at="2019-10-16T17:04:06Z" finished-at="2019-10-16T17:04:06Z">
           <params>
             <param index="0">
               <value>
@@ -87,7 +87,45 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="endReport" is-config="true" duration-ms="553" started-at="2019-10-16T15:59:10Z" finished-at="2019-10-16T15:59:11Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="preCondition" is-config="true" duration-ms="14086" started-at="2019-10-16T17:04:06Z" finished-at="2019-10-16T17:04:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method status="PASS" signature="verify_login_functionality(java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="verify_login_functionality" duration-ms="4288" started-at="2019-10-16T17:04:20Z" data-provider="getCRMTestData" finished-at="2019-10-16T17:04:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sanchita@sourcesoftsolutions.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing123@]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_login_functionality -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="postCondition" is-config="true" duration-ms="0" started-at="2019-10-16T17:04:24Z" finished-at="2019-10-16T17:04:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_login_functionality status=SUCCESS method=HomePageTest.verify_login_functionality(java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:sourcesoft.proassur.HomePageTest@2c8d66b2]" name="endReport" is-config="true" duration-ms="1362" started-at="2019-10-16T17:04:24Z" finished-at="2019-10-16T17:04:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->

@@ -105,6 +105,7 @@ public class BaseLib
    public void endReport()
    {
 	   reports.flush();
+	   driver.close();
    }
    
    @DataProvider
