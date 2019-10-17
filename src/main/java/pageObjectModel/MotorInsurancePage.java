@@ -1,7 +1,9 @@
 package pageObjectModel;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class MotorInsurancePage
 {
@@ -25,6 +27,11 @@ public class MotorInsurancePage
   
   @FindBy(xpath="//select[@name='fuel_type']")
   private WebElement sel_fuel_type;
+  
+  public MotorInsurancePage(WebDriver driver)
+  {
+	  PageFactory.initElements(driver,this);
+  }
   
   
   
