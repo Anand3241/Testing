@@ -37,6 +37,7 @@ public class Homepage
 	 enter_email.sendKeys(email);
 	 enter_pass.sendKeys(pass);
 	 clk_login_btn.click();
+	 System.out.println("Hello testing");
 	 
  }
  
