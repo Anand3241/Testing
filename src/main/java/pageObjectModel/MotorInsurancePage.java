@@ -33,6 +33,10 @@ public class MotorInsurancePage
 	  PageFactory.initElements(driver,this);
   }
   
-  
+  public void vehicle_functionlity()
+  {
+	  clk_motor.click();
+	  clk_here.click();
+  }
   
 }
