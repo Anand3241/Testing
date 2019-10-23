@@ -38,6 +38,7 @@ public class Homepage
 	 enter_pass.sendKeys(pass);
 	 clk_login_btn.click();
 	 System.out.println("Hello testing");
+	 System.out.println("I am in brach 2");
 	 
  }
  
