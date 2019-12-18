@@ -25,7 +25,7 @@ public class Homepage
  @FindBy(xpath="//input[@id='password']")
  private WebElement enter_pass;
  
- @FindBy(xpath="//button[text()='Login']")
+ @FindBy(xpath="//button[text()='Logi']")
  private WebElement clk_login_btn;
  
  

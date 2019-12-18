@@ -13,15 +13,16 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -113,9 +114,9 @@ public class BaseLib
 		   
 		   logger.log(Status.FAIL, "TEST CASE FAILED IS " + r.getName()); // to add name in extent report
 		   logger.log(Status.FAIL, "TEST CASE FAILED IS " + r.getThrowable()); // to add error/exception in extent
-		      
-		      String screenShotpath = GetScreenShotLib.capture(driver, r.getName().toString());
-		      logger.addScreenCaptureFromPath(screenShotpath);
+		   String screenShotpath = GetScreenShotLib.capture(driver, r.getName().toString());
+		   logger.fail("Test Failed",MediaEntityBuilder.createScreenCaptureFromPath(GetScreenShotLib.capture(driver,r.getName().toString())).build());
+		   logger.addScreencastFromPath(screenShotpath);
 		       
      }
 	   else if(r.getStatus()==ITestResult.SKIP)
@@ -123,9 +124,9 @@ public class BaseLib
 		   
 		   logger.log(Status.SKIP, "TEST CASE SKIPED IS " + r.getName()); // to add name in extent report
 		   logger.log(Status.SKIP, "TEST CASE SKIPED IS " + r.getThrowable()); // to add error/exception in extent
-		      
-		      String screenShotpath = GetScreenShotLib.capture(driver, r.getName().toString());
-		      logger.addScreenCaptureFromPath(screenShotpath);
+		   String screenShotpath = GetScreenShotLib.capture(driver, r.getName().toString());
+		   logger.skip("Test skipped",MediaEntityBuilder.createScreenCaptureFromPath(GetScreenShotLib.capture(driver,screenShotpath)).build());
+		   logger.addScreencastFromPath(screenShotpath);
 	   }
 	   
 	   else if(r.getStatus() == ITestResult.SUCCESS)
