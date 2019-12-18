@@ -9,59 +9,75 @@ import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+
 
 public class BaseLib 
 {
  public  WebDriver driver; 
- public static ExtentReports reports;
- public static ExtentTest test;
+
    FileInputStream fis;
    File file;
    Properties p;
-   @BeforeTest
-   public void startTest()
-   {
-	   reports= new ExtentReports(System.getProperty("user.dir")+"/Report/report.html", true);
-	   reports.addSystemInfo("Hostname", "Anand");
-	   reports.addSystemInfo("Enviornment", "QA");
-	   reports.addSystemInfo("User Name", "Anand Srivastava");
-	   reports.loadConfig(new File(System.getProperty("user.dir")+"/extent-config.xml"));
-   }
+   public ExtentHtmlReporter extent;
+   public ExtentReports report;
+   public ExtentTest logger;
+   
+ @BeforeSuite
+ public void setSuiteUp()
+ {
+	 Reporter.log("setting up Reports and Test started",true);
+	 String workingDir = System.getProperty("user.dir");
+	 extent = new ExtentHtmlReporter(workingDir + "/Report/ExtentReportResults.html");
+	 
+	 extent.config().setDocumentTitle("Automation Report"); // Tile of report
+	 extent.config().setReportName("Functional Testing"); // Name of the report
+	 extent.config().setTheme(Theme.DARK);
+	 report=new ExtentReports();
+	 report.attachReporter(extent);
+	logger= report.createTest("Login Test ");
+	 
+	 Reporter.log("Setting Done--Test Cases",true);
+	 
+ }
+   
    @BeforeMethod
    @Parameters(value="browser")
    
    public void preCondition(String browser) throws IOException
    {
 	   file=new File(System.getProperty("user.dir")+"/object_repository.properties");
-	fis= new FileInputStream(file);
-		  p= new Properties();
-		  p.load(fis); 
+	   fis= new FileInputStream(file);
+	   p= new Properties();
+	   p.load(fis); 
 	   
 	  if(browser.equalsIgnoreCase("firefox"))
 	  {
 		 
 		  System.setProperty("webdriver.gecko.driver",new File(System.getProperty("user.dir"))+"/exeFiles/geckodriver.exe");
 		  driver= new FirefoxDriver();
-		
-		  test= reports.startTest("Proassur Testing");
-		  test.log(LogStatus.INFO, "Open the browser");
 		  String u = p.getProperty("url");
-			System.out.println(u);
-		   driver.get(u);
+		  System.out.println(u);
+		  driver.get(u);
 		  String title = driver.getTitle();
 		  System.out.println(title);
-		   String url = driver.getCurrentUrl();
-		   System.out.println(url);
+		  String url = driver.getCurrentUrl();
+		  System.out.println(url);
 		
 	  } 
 		  else
@@ -69,13 +85,14 @@ public class BaseLib
 			  System.setProperty("webdriver.chrome.driver",new File(System.getProperty("user.dir"))+"/exeFiles/chromedriver.exe");
 			 
 			  driver= new ChromeDriver();
-			 test= reports.startTest("Proassur Testing");
-			  test.log(LogStatus.INFO, "Open the browser");
+			  driver.manage().window().maximize();
+			
 			String u = p.getProperty("url");
 			System.out.println(u);
-			  driver.get(u);
-			  String title = driver.getTitle();
-			  System.out.println(title);
+			driver.get(u);
+			String title = driver.getTitle();
+			System.out.println(title);
+			Assert.assertEquals(title,"PROASSUR");  
 			  
 			   String url = driver.getCurrentUrl();
 			   System.out.println(url);
@@ -88,24 +105,36 @@ public class BaseLib
    
    
    @AfterMethod
-   public void postCondition(ITestResult r)
+   public void postCondition(ITestResult r) throws IOException
    {
+	   Reporter.log("The Test is about to end",true);
 	   if(r.getStatus()==ITestResult.FAILURE)
 	   {
-		      test= reports.startTest("Capture Screen Shot");
-		      String screenShotpath = GetScreenShotLib.capture(driver, r.getName());
-		        test.log(LogStatus.FAIL, r.getThrowable());
-		        test.log(LogStatus.FAIL, "snapshot below:"+test.addScreenCapture(screenShotpath));
-		        
-		        
+		   
+		   logger.log(Status.FAIL, "TEST CASE FAILED IS " + r.getName()); // to add name in extent report
+		   logger.log(Status.FAIL, "TEST CASE FAILED IS " + r.getThrowable()); // to add error/exception in extent
+		      
+		      String screenShotpath = GetScreenShotLib.capture(driver, r.getName().toString());
+		      logger.addScreenCaptureFromPath(screenShotpath);
+		       
+     }
+	   else if(r.getStatus()==ITestResult.SKIP)
+	   {
+		   
+		   logger.log(Status.SKIP, "TEST CASE SKIPED IS " + r.getName()); // to add name in extent report
+		   logger.log(Status.SKIP, "TEST CASE SKIPED IS " + r.getThrowable()); // to add error/exception in extent
+		      
+		      String screenShotpath = GetScreenShotLib.capture(driver, r.getName().toString());
+		      logger.addScreenCaptureFromPath(screenShotpath);
 	   }
+	   
+	   else if(r.getStatus() == ITestResult.SUCCESS)
+	   {
+		   logger.log(Status.PASS, "Test Case PASSED IS " + r.getName());
 	 
-   }
-   @AfterTest
-   public void endReport()
-   {
-	   reports.flush();
-	   driver.close();
+      }
+	   
+	   report.flush();
    }
    
    @DataProvider

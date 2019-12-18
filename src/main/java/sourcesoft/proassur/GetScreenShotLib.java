@@ -3,7 +3,8 @@ package sourcesoft.proassur;
 
 
 import java.io.File;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -15,13 +16,14 @@ public class GetScreenShotLib
 {
    public static String capture(WebDriver driver,String screenshotname)
    {
+	   String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 	   try
 	   {
 		  TakesScreenshot ts = (TakesScreenshot) driver;
 		    File source = ts.getScreenshotAs(OutputType.FILE);
 		    
 		   
-		      File destination= new File(System.getProperty("user.dir")+"/screenShot/"+screenshotname+".jpeg");
+		      File destination= new File(System.getProperty("user.dir")+"/screenShot/"+screenshotname+dateName+".jpeg");
 		//  FileUtils.copyFile(source, destination);
 		  
 	      FileHandler.copy(source, destination);
