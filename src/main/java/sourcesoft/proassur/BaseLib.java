@@ -24,6 +24,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
@@ -85,8 +86,8 @@ public class BaseLib
 		  {
 			  System.setProperty("webdriver.chrome.driver",new File(System.getProperty("user.dir"))+"/exeFiles/chromedriver.exe");
 			 
-			  driver= new ChromeDriver();
-			  driver.manage().window().maximize();
+		    driver= new ChromeDriver();
+			driver.manage().window().maximize();
 			
 			String u = p.getProperty("url");
 			System.out.println(u);
@@ -115,8 +116,9 @@ public class BaseLib
 		   logger.log(Status.FAIL, "TEST CASE FAILED IS " + r.getName()); // to add name in extent report
 		   logger.log(Status.FAIL, "TEST CASE FAILED IS " + r.getThrowable()); // to add error/exception in extent
 		   String screenShotpath = GetScreenShotLib.capture(driver, r.getName().toString());
-		   logger.fail("Test Failed",MediaEntityBuilder.createScreenCaptureFromPath(GetScreenShotLib.capture(driver,r.getName().toString())).build());
-		   logger.addScreencastFromPath(screenShotpath);
+		  logger.fail("Test Failed",MediaEntityBuilder.createScreenCaptureFromPath(screenShotpath).build());
+		 
+		   
 		       
      }
 	   else if(r.getStatus()==ITestResult.SKIP)
@@ -126,7 +128,7 @@ public class BaseLib
 		   logger.log(Status.SKIP, "TEST CASE SKIPED IS " + r.getThrowable()); // to add error/exception in extent
 		   String screenShotpath = GetScreenShotLib.capture(driver, r.getName().toString());
 		   logger.skip("Test skipped",MediaEntityBuilder.createScreenCaptureFromPath(GetScreenShotLib.capture(driver,screenShotpath)).build());
-		   logger.addScreencastFromPath(screenShotpath);
+		   
 	   }
 	   
 	   else if(r.getStatus() == ITestResult.SUCCESS)

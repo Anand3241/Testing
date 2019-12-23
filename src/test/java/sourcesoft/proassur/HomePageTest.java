@@ -1,9 +1,12 @@
 package sourcesoft.proassur;
 
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import pageObjectModel.Homepage;
+
+@Listeners(sourcesoft.proassur.ListenerTest.class)
 
 public class HomePageTest extends BaseLib
 {

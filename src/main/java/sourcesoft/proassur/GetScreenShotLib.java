@@ -17,24 +17,27 @@ public class GetScreenShotLib
    public static String capture(WebDriver driver,String screenshotname)
    {
 	   String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-	   try
-	   {
+	  
 		  TakesScreenshot ts = (TakesScreenshot) driver;
 		    File source = ts.getScreenshotAs(OutputType.FILE);
 		    
-		   
-		      File destination= new File(System.getProperty("user.dir")+"/screenShot/"+screenshotname+dateName+".jpeg");
-		//  FileUtils.copyFile(source, destination);
-		  
+		     String path=System.getProperty("user.dir")+"/screenShot/"+screenshotname+dateName+".jpeg";
+		      File destination= new File(path);
+		      try
+		 {   
+		 
 	      FileHandler.copy(source, destination);
+	    
 		  }
 	   
 	   catch(Exception e)
 	   {
 		   e.printStackTrace();
 	   }
-	return screenshotname;
+	return path;
 	
 	
+	   
    }
+  
 }
