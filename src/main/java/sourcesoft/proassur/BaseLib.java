@@ -31,7 +31,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class BaseLib 
 {
- public  WebDriver driver; 
+ public static WebDriver driver; 
 
    FileInputStream fis;
    File file;

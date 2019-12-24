@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import sourcesoft.proassur.Utility;
+
 
 
 public class Homepage
@@ -25,7 +27,7 @@ public class Homepage
  @FindBy(xpath="//input[@id='password']")
  private WebElement enter_pass;
  
- @FindBy(xpath="//button[text()='Login1']")
+ @FindBy(xpath="//button[text()='Login']")
  private WebElement clk_login_btn;
  
  
