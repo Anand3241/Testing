@@ -1,5 +1,6 @@
 package sourcesoft.proassur;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -52,5 +53,106 @@ public class Utility extends BaseLib
 		   
     }
    
+   public static void checkbox_checking(WebElement ele)
+   {
+	   boolean checkbox_status;
+	   checkbox_status=ele.isSelected();
+	   if(checkbox_status==true)
+	   {
+		   System.out.println("checkbox is already selected");
+      }
+	   else
+	   {
+		   ele.click();
+		   System.out.println("Checked the checkbox");
+	   }
+	   
+   }
+   public static void radiobutton_Select(WebElement Radio) 
+   {
+	   boolean checkstatus;
+	   checkstatus = Radio.isSelected();
+	   if (checkstatus == true)
+	   {
+	   System.out.println("RadioButton is already checked");
+	   }
+	   else 
+	   {
+	   Radio.click();
+	   System.out.println("Selected the Radiobutton");
+	   }
+    }
+   
+   public static void checkbox_Unchecking(WebElement checkbox)
+   {
+	   boolean checkstatus;
+	   checkstatus = checkbox.isSelected();
+	   if (checkstatus == true)
+	   {
+	   checkbox.click();
+	   System.out.println("Checkbox is unchecked");
+	   } 
+	   else
+	   {
+	   System.out.println("Checkbox is already unchecked");
+	   }
+ }
+   
+   public static void radioButton_Deselect(WebElement Radio)
+   {
+	   boolean checkstatus;
+	   checkstatus = Radio.isSelected();
+	   if (checkstatus == true) 
+	   {
+	   Radio.click();
+	   System.out.println("Radio Button is deselected");
+	   }
+	   else 
+	   {
+	   System.out.println("Radio Button was already Deselected");
+	   }
+	   }
+   
+   public static boolean checkAlert_Accept()
+   {
+	   try
+	   {
+	   Alert a = driver.switchTo().alert();
+	   String str = a.getText();
+	   System.out.println(str);
+
+	   a.accept();
+	   return true;
+
+	   } 
+	   catch (Exception e)
+	   {
+
+	   System.out.println("No alert found");
+	   return false;
+
+	   }
+  }
+   
+   public static boolean checkAlert_Dismiss()
+   {
+	   try
+	   {
+	   Alert a = driver.switchTo().alert();
+	   String str = a.getText();
+	   System.out.println(str);
+
+	   a.dismiss();
+	   return true;
+
+	   }
+	   catch (Exception e) 
+	   {
+
+	   System.out.println("No alert found");
+	   return false;
+
+	   }
+	   }
    
 }
