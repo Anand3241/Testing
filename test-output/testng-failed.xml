@@ -1,38 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="browser" value="Chrome"/>
+  <listeners>
+    <listener class-name="sourcesoft.proassur.ListenerTest"/>
+  </listeners>
   <test name="Test">
     <parameter name="browser" value="Chrome"/>
     <classes>
       <class name="sourcesoft.proassur.HomePageTest"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="sourcesoft.proassur.HomePageTest">
-        <methods>
-          <include name="verify_login_functionality"/>
-          <include name="setSuiteUp"/>
-          <include name="preCondition"/>
-        </methods>
-      </class> <!-- sourcesoft.proassur.HomePageTest -->
-    </classes>
-  </test> <!-- Test(failed) -->
-  <test name="Test(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="sourcesoft.proassur.HomePageTest">
-        <methods>
-          <include name="postCondition"/>
-          <include name="postCondition"/>
-          <include name="verify_login_functionality" invocation-numbers="0"/>
-          <include name="setSuiteUp"/>
-          <include name="preCondition"/>
-          <include name="preCondition"/>
-        </methods>
-      </class> <!-- sourcesoft.proassur.HomePageTest -->
-    </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Failed suite [Suite]] -->
+</suite> <!-- Failed suite [Suite] -->

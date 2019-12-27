@@ -1,15 +1,32 @@
 package sourcesoft.proassur;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.Cookie;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utility extends BaseLib
 {
  public static Select sel;	
  public static Actions builder;
+ public static WebDriverWait wait ;
+ static File file;
+ static FileReader file_reader;
+ static FileWriter fileWrite;
+ static BufferedWriter bwrite;
    public static void selectElementByvalueMethod(WebElement ele,String value)
    {
 	   sel=new Select(ele);
@@ -154,5 +171,86 @@ public class Utility extends BaseLib
 
 	   }
 	   }
+   
+   public static void switch_tonew_window()
+   {
+	   String defaultWindow = driver.getWindowHandle();
+	   System.out.println("Default window name is- " +defaultWindow);
+	   Set<String> childWindows = driver.getWindowHandles();
+	   for(String child : childWindows)
+	   {
+	  		  
+	  		  if(!child.equalsIgnoreCase(defaultWindow))
+	  		  {
+	  			  driver.switchTo().window(child);
+	  			  System.out.println("Child windows- "+child);
+	  			  driver.close();
+	  			  driver.switchTo().window(defaultWindow);
+	  		  }
+	  		  
+	  		  else 
+	  		  {
+	  			  System.out.println("There are no child windows");
+	  		  }
+	  		  
+	  		  
+	  	  }
+	  }
+   
+   public static void switch_totabs()
+   {
+	   Set<String> childWindows = driver.getWindowHandles();
+	   ArrayList<String> newTab = new ArrayList<String>(childWindows);
+	   System.out.println(newTab.size());
+	   driver.switchTo().window(newTab.get(1));
+	   
+   }
+   
+   public static void waitForElement(WebElement element)
+   {
+
+	   WebDriverWait wait = new WebDriverWait(driver, 10);
+	   wait.until(ExpectedConditions.elementToBeClickable(element));
+   }
+   
+   
+   public static void waitTillElementFound(WebElement ElementTobeFound,int seconds)
+   {
+		 wait = new WebDriverWait(driver, seconds);
+		   wait.until(ExpectedConditions.visibilityOf(ElementTobeFound));
+  }
+ 
+   
+   public static void waitTillPageLoad(int i)
+   {
+
+	   driver.manage().timeouts().pageLoadTimeout(i, TimeUnit.SECONDS);
+
+ }
+   
+   public static void cookies_handling()
+   {
+	   file=new File("Cookies.data");
+	  try
+	  {
+	  
+	   file.delete();
+	   file.createNewFile();
+	   fileWrite = new FileWriter(file);
+	   bwrite = new BufferedWriter(fileWrite);
+	   for(Cookie ck : driver.manage().getCookies())
+	   {
+		  bwrite.write((ck.getName()+";"+ck.getValue()+";"+ck.getDomain()+";"+ck.getPath()+";"+ck.getExpiry()+";"+ck.isSecure())); 
+		  bwrite.newLine();
+	   }
+	   
+	   bwrite.close();
+	   fileWrite.close();
+	  }
+	  catch(Exception e)
+	  {
+		  e.printStackTrace();
+	  }
+   }
    
 }
