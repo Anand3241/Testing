@@ -11,4 +11,17 @@
       <class name="sourcesoft.proassur.HomePageTest"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="sourcesoft.proassur.HomePageTest">
+        <methods>
+          <include name="test_hover"/>
+          <include name="postCondition"/>
+          <include name="setSuiteUp"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- sourcesoft.proassur.HomePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

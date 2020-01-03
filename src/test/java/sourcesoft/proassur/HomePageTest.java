@@ -25,7 +25,7 @@ public class HomePageTest extends BaseLib
 	 logger=report.createTest("End the testing");
  }
  
-@Test
+@Test(enabled=false)
 public void window_handle()
 {
 	Utility.switch_tonew_window();
@@ -38,4 +38,21 @@ public void window_handle()
 	
 	
 }
+
+@Test
+public void test_hover()
+{
+	Utility.switch_tonew_window();
+	tes=new TestScenarios(driver);
+	Utility.hover_on(tes.hover_on_tools());
+	Utility.waitTillPageLoad(10);
+	tes.clk_on_career_navigator_method().click();
+	Utility.switch_totabs();
+	Utility.selectElementByvalueMethod(tes.select_year_method(),"2006");
+	
+	
+	
+	
+}
+
 }

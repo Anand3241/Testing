@@ -27,6 +27,8 @@ public class Utility extends BaseLib
  static FileReader file_reader;
  static FileWriter fileWrite;
  static BufferedWriter bwrite;
+ 
+ 
    public static void selectElementByvalueMethod(WebElement ele,String value)
    {
 	   sel=new Select(ele);
@@ -43,6 +45,12 @@ public class Utility extends BaseLib
    {
 	    sel = new Select(element);
 	   sel.selectByVisibleText(Name);
+   }
+   
+   public static void hover_on(WebElement ele)
+   {
+	   builder = new Actions(driver);
+	   builder.moveToElement(ele).perform();
    }
    
    public static void dragAndDrop(WebElement fromWebElement,WebElement toWebElement)
