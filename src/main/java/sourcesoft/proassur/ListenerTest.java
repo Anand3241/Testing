@@ -9,21 +9,21 @@ public class ListenerTest implements ITestListener
 	 @Override		
 	    public void onFinish(ITestContext result) 
 	 {					
-	        			
+		 System.out.println("This is onFinish method" + result.getPassedTests());			
 	        		
 	    }		
 
 	    @Override		
 	    public void onStart(ITestContext result) 
 	    {					
-	        			
+	    	System.out.println("This is onStart method" + result.getOutputDirectory());		
 	        		
 	    }		
 
 	    @Override		
 	    public void onTestFailedButWithinSuccessPercentage(ITestResult result)
 	    {					
-	        // TODO Auto-generated method stub				
+	    	System.out.println("Test Failed but within success percentage" + result.getName());		
 	        		
 	    }		
 

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import sourcesoft.proassur.SignUpData;
 import sourcesoft.proassur.Utility;
 
 
@@ -34,12 +35,16 @@ public class Homepage
  
  
  public void login(String email,String pass)
+ 
  {
 	 clk_login.click();
 	 enter_email.sendKeys(email);
 	 enter_pass.sendKeys(pass);
 	 clk_login_btn.click();
 	 System.out.println("Hello testing");
+	 
+	 
+	
 	 
  }
  

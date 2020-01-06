@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="4" total="5" passed="1">
   <reporter-output>
     <line>
       <![CDATA[setting up Reports and Test started]]>
@@ -10,13 +10,25 @@
     <line>
       <![CDATA[The Test is about to end]]>
     </line>
+    <line>
+      <![CDATA[The Test is about to end]]>
+    </line>
+    <line>
+      <![CDATA[The Test is about to end]]>
+    </line>
+    <line>
+      <![CDATA[The Test is about to end]]>
+    </line>
+    <line>
+      <![CDATA[The Test is about to end]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="36568" started-at="2020-01-02T10:17:16Z" finished-at="2020-01-02T10:17:53Z">
+  <suite name="Suite" duration-ms="30711" started-at="2020-01-03T11:31:48Z" finished-at="2020-01-03T11:32:19Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="36568" started-at="2020-01-02T10:17:16Z" finished-at="2020-01-02T10:17:53Z">
+    <test name="Test" duration-ms="30711" started-at="2020-01-03T11:31:48Z" finished-at="2020-01-03T11:32:19Z">
       <class name="sourcesoft.proassur.HomePageTest">
-        <test-method status="PASS" signature="setSuiteUp()[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="setSuiteUp" is-config="true" duration-ms="266" started-at="2020-01-02T15:47:16Z" finished-at="2020-01-02T15:47:16Z">
+        <test-method status="PASS" signature="setSuiteUp()[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="setSuiteUp" is-config="true" duration-ms="265" started-at="2020-01-03T17:01:48Z" finished-at="2020-01-03T17:01:48Z">
           <reporter-output>
             <line>
               <![CDATA[setting up Reports and Test started]]>
@@ -26,7 +38,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setSuiteUp -->
-        <test-method status="PASS" signature="preCondition(java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="preCondition" is-config="true" duration-ms="26951" started-at="2020-01-02T15:47:16Z" finished-at="2020-01-02T15:47:43Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="preCondition" is-config="true" duration-ms="22842" started-at="2020-01-03T17:01:48Z" finished-at="2020-01-03T17:02:11Z">
           <params>
             <param index="0">
               <value>
@@ -37,25 +49,149 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="FAIL" signature="test_hover()[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="test_hover" duration-ms="8772" started-at="2020-01-02T15:47:43Z" finished-at="2020-01-02T15:47:52Z">
+        <test-method status="PASS" signature="regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="regtistration" duration-ms="4286" started-at="2020-01-03T17:02:11Z" data-provider="getRegistrationData" finished-at="2020-01-03T17:02:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Anand]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Kumar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[91.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9.876434554E9]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Noida]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[anand@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regtistration -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="postCondition" is-config="true" duration-ms="467" started-at="2020-01-03T17:02:16Z" finished-at="2020-01-03T17:02:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=regtistration status=SUCCESS method=HomePageTest.regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The Test is about to end]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method status="FAIL" signature="regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="regtistration" duration-ms="37" started-at="2020-01-03T17:02:16Z" data-provider="getRegistrationData" finished-at="2020-01-03T17:02:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anand12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Singh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[23.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9.876434555E9]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1234567.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[anand2@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot locate option with value: 2006
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='SIGNUP']"}
+  (Session info: chrome=79.0.3945.88)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'KELLGGNCPU0126', ip: '192.168.15.53', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: driver.version: unknown]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANAND~1.SRI\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a925c067fa93ffb6ced98a4fbec1d5f3
+*** Element info: {Using=xpath, value=//strong[text()='SIGNUP']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with value: 2006
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='SIGNUP']"}
+  (Session info: chrome=79.0.3945.88)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'KELLGGNCPU0126', ip: '192.168.15.53', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:283)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)
-	at sourcesoft.proassur.Utility.selectElementByvalueMethod(Utility.java:33)
-	at sourcesoft.proassur.HomePageTest.test_hover(HomePageTest.java:51)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANAND~1.SRI\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a925c067fa93ffb6ced98a4fbec1d5f3
+*** Element info: {Using=xpath, value=//strong[text()='SIGNUP']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at sourcesoft.proassur.HomePageTest.regtistration(HomePageTest.java:65)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -85,12 +221,393 @@ Driver info: driver.version: unknown
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_hover -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="postCondition" is-config="true" duration-ms="828" started-at="2020-01-02T15:47:52Z" finished-at="2020-01-02T15:47:53Z">
+        </test-method> <!-- regtistration -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="postCondition" is-config="true" duration-ms="787" started-at="2020-01-03T17:02:16Z" finished-at="2020-01-03T17:02:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_hover status=FAILURE method=HomePageTest.test_hover()[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec] output={null}]]]>
+                <![CDATA[[TestResult name=regtistration status=FAILURE method=HomePageTest.regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The Test is about to end]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method status="FAIL" signature="regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="regtistration" duration-ms="25" started-at="2020-01-03T17:02:17Z" data-provider="getRegistrationData" finished-at="2020-01-03T17:02:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Anand2334]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mishra]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[11.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9.876434556E9]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[anand]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Gurgaon]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[anand3@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='SIGNUP']"}
+  (Session info: chrome=79.0.3945.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KELLGGNCPU0126', ip: '192.168.15.53', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANAND~1.SRI\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a925c067fa93ffb6ced98a4fbec1d5f3
+*** Element info: {Using=xpath, value=//strong[text()='SIGNUP']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='SIGNUP']"}
+  (Session info: chrome=79.0.3945.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KELLGGNCPU0126', ip: '192.168.15.53', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANAND~1.SRI\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a925c067fa93ffb6ced98a4fbec1d5f3
+*** Element info: {Using=xpath, value=//strong[text()='SIGNUP']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at sourcesoft.proassur.HomePageTest.regtistration(HomePageTest.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regtistration -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="postCondition" is-config="true" duration-ms="507" started-at="2020-01-03T17:02:17Z" finished-at="2020-01-03T17:02:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=regtistration status=FAILURE method=HomePageTest.regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The Test is about to end]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method status="FAIL" signature="regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="regtistration" duration-ms="16" started-at="2020-01-03T17:02:18Z" data-provider="getRegistrationData" finished-at="2020-01-03T17:02:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ashish]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[kalra]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[55.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9.876434557E9]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[987654.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Gaziabad]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[anand4@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='SIGNUP']"}
+  (Session info: chrome=79.0.3945.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KELLGGNCPU0126', ip: '192.168.15.53', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANAND~1.SRI\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a925c067fa93ffb6ced98a4fbec1d5f3
+*** Element info: {Using=xpath, value=//strong[text()='SIGNUP']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='SIGNUP']"}
+  (Session info: chrome=79.0.3945.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KELLGGNCPU0126', ip: '192.168.15.53', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANAND~1.SRI\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a925c067fa93ffb6ced98a4fbec1d5f3
+*** Element info: {Using=xpath, value=//strong[text()='SIGNUP']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at sourcesoft.proassur.HomePageTest.regtistration(HomePageTest.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regtistration -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="postCondition" is-config="true" duration-ms="518" started-at="2020-01-03T17:02:18Z" finished-at="2020-01-03T17:02:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=regtistration status=FAILURE method=HomePageTest.regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[The Test is about to end]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method status="FAIL" signature="regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="regtistration" duration-ms="12" started-at="2020-01-03T17:02:18Z" data-provider="getRegistrationData" finished-at="2020-01-03T17:02:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vikash]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hello]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[33.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9.876434558E9]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[654789.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[frhhfsdg]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Faridabad]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[anand5@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='SIGNUP']"}
+  (Session info: chrome=79.0.3945.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KELLGGNCPU0126', ip: '192.168.15.53', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANAND~1.SRI\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a925c067fa93ffb6ced98a4fbec1d5f3
+*** Element info: {Using=xpath, value=//strong[text()='SIGNUP']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//strong[text()='SIGNUP']"}
+  (Session info: chrome=79.0.3945.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KELLGGNCPU0126', ip: '192.168.15.53', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ANAND~1.SRI\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a925c067fa93ffb6ced98a4fbec1d5f3
+*** Element info: {Using=xpath, value=//strong[text()='SIGNUP']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at sourcesoft.proassur.HomePageTest.regtistration(HomePageTest.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regtistration -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec]" name="postCondition" is-config="true" duration-ms="512" started-at="2020-01-03T17:02:18Z" finished-at="2020-01-03T17:02:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=regtistration status=FAILURE method=HomePageTest.regtistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:sourcesoft.proassur.HomePageTest@3b6eb2ec] output={null}]]]>
               </value>
             </param>
           </params>

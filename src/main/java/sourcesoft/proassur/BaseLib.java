@@ -89,7 +89,7 @@ public class BaseLib
 		    driver= new ChromeDriver();
 			driver.manage().window().maximize();
 			
-			String u = p.getProperty("url");
+			String u = p.getProperty("url1");
 			System.out.println(u);
 			driver.get(u);
 			String title = driver.getTitle();
@@ -146,4 +146,13 @@ public class BaseLib
   		Object data[][] = ExcelLib.getExceldata("Sheet1");
   		return data;
   }
+   
+   @DataProvider
+   public Object[][] getRegistrationData() throws EncryptedDocumentException, IOException
+   
+   {
+	   Object data[][] = ExcelLib.getExceldata("Sheet2");
+	  return data;
+	   
+   }
 }

@@ -16,8 +16,8 @@
     <classes>
       <class name="sourcesoft.proassur.HomePageTest">
         <methods>
-          <include name="test_hover"/>
           <include name="postCondition"/>
+          <include name="regtistration" invocation-numbers="1 2 3 4"/>
           <include name="setSuiteUp"/>
           <include name="preCondition"/>
         </methods>
